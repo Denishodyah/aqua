@@ -1,0 +1,433 @@
+@font-face {
+    font-family:'Montserrat';
+    src: url('../fonts/MontserratAlternates-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: 400;
+    font-display: swap;
+}
+@media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  a,button,input,textarea,svg * {
+    transition-duration: 0.3s;
+}
+a {
+text-decoration: none;
+color: inherit;
+}
+:root {
+--color-blue: #ADD7F6;
+--bg-body-link: #3F8EFC;
+--active-link: #2667FF;
+--color-btn: #3B28CC;
+--color-btn-active:#87BFFF;
+--color-dark: #000;
+--color-white: #fff;
+}
+body {
+
+    background: var(--bg-body-link);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    line-height: 1.2;
+}
+main {
+    overflow: hidden;
+}
+.container {
+    max-width: 1390px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+}
+.active {
+    background: var(--active-link);
+}
+/*-------------------header------------------- */
+.header {
+    background: var(--color-blue);
+    padding-top: 9px;
+}
+.header__inner {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.header-logo {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.header-logo__name {
+    color: var(--color-dark);
+font-size: 20px;
+
+}
+.header-nav__list {
+    display: flex;
+    column-gap: 9px;
+    color: var(--color-white);
+    font-size: 32px;
+}
+
+.header-nav__link {
+    background: var(--bg-body-link);
+    border-radius: 10px;
+    padding: 7px;
+}
+.header-nav__link:hover {
+    background: var(--active-link);
+}
+
+.header-nav__btn {
+    background: var(--color-btn);
+    border-radius: 10px;
+    padding: 7px;
+}
+.header-nav__btn-active {
+    padding: 15px;
+}
+.header-nav__btn:hover {
+    background: var(--color-btn-active);
+}
+
+/* ---------------блок о нас(about)------------ */
+.about {
+    min-height: 100vh;
+    position: relative;
+}
+
+.about__img {
+    position: absolute;
+    top: 37px;
+    right: 335px;
+    z-index: 1;
+}
+.about__subtitle {
+    position: relative;
+    color: var(--color-white);
+font-size: 40px;
+max-width: 720px;
+margin-left: auto;
+padding-top: 117px;
+z-index: 5;
+}
+/* ----------- блок каталог----------- */
+/* -------оборудование-------- */
+.catalog {
+    padding: 29px 0 72px;
+}
+.catalog-block {
+    display: grid;
+    grid-template-columns: 250px 55px 450px 55px 450px 55px;
+    column-gap: 10px;
+}
+.furniture {
+    display: flex;
+    flex-direction: column;
+justify-content: space-between;
+}
+
+.furniture__card {
+    background: var(--color-blue);
+    border-radius: 25px;
+    padding: 10px;
+height: 209px;
+
+}
+
+.furniture-width {
+    height: 240px;
+}
+.furniture__title {
+font-size: 32px;
+font-weight: 400;
+text-align: center;
+}
+.catalog-block__name {
+    color: var(--color-white);
+font-size: 48px;
+font-weight: 400;
+text-transform: uppercase;
+    writing-mode: vertical-lr;
+    letter-spacing: 8px;
+    text-orientation: upright;
+}
+/* ----аквариумы и декорации---------- */
+.products {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 32px;
+}
+.products-card {
+    background: var(--color-blue);
+    border-radius: 25px;
+    padding: 10px;
+margin: 0 auto 0 auto;
+}
+.products-card__title {
+    color: var(--color-dark);
+font-size: 32px;
+font-weight: 400;
+line-height: 39px;
+text-align: center;
+}
+.card-place{
+    align-self: flex-end;
+    width: 450px;
+    grid-column: span 2;
+    padding: 0;
+}
+.products-card__subblock {
+    display: flex;
+    justify-content: end;
+
+}
+.products-card__subblock2 {
+    display: flex;
+    justify-content: unset;
+}
+.products-card__title2 {
+    margin-left: 12px;
+    margin-top: auto;
+    color: var(--color-dark);
+font-size: 32px;
+font-weight: 400;
+text-transform: uppercase;
+}
+.cup-width {
+    font-size: 24px;
+}
+
+.products-card__img2 {
+    height: 205px;
+    margin-left: -130px;
+}
+.ship {
+    margin-left: 3px;
+}
+/*---------- карта где мы----------------- */
+.map {
+    position: relative;
+    z-index: 999;
+    padding: 45px 0 114px;
+}
+.map-block {
+    display: flex;
+    flex-wrap: wrap;
+  column-gap: 40px;
+  color: var(--color-white);
+}
+.map-block__left {
+    text-align: center;
+}
+.map-block__right {
+text-align: center;
+font-size: 48px;
+font-weight: 400;
+}
+.map-block__adress {
+font-size: 48px;
+font-weight: 400;
+max-width: 779px;
+}
+.map-block__adress2 {
+    max-width: 443px;
+}
+
+.map-block__fish {
+    z-index: -1;
+    position: absolute;
+    top: 237px;
+    left: 542px;
+}
+/*----------контакты--------- */
+.contacts {
+    position: relative;
+    z-index: 999;
+    padding: 69px 0 163px;
+}
+.contacts-block {
+    display: flex;
+    justify-content: space-between;
+}
+.contacts-form {
+    display: flex;
+    flex-direction: column;
+}
+.contacts-form__info input {
+    background: var(--color-blue);
+    border: none;
+    margin-bottom: 18px;
+    border-radius: 25px;
+    width: 650px;
+    padding: 11px;
+    
+}
+ textarea {
+    background: var(--color-blue);
+    border-radius: 25px;
+    height: 389px;
+    border: none;
+    padding: 10px;
+}
+.contacts__fish {
+    position: absolute;
+    top: 188px;
+    right: 625px;
+    z-index: -1;
+}
+.contacts-info {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: end;
+    text-align: center;
+    color: var(--color-white);
+    font-size: 40px;
+    font-weight: 400;
+}
+.contacts-info__mail {
+    margin-bottom: 20px;
+}
+.contacts-info__bottom {
+    margin-bottom: 38px;
+}
+.socials {
+    display: flex;
+    column-gap: 9px;
+    justify-content: center;
+}
+/* ------------------отзывы-------------- */
+.about {
+    padding: 40px 0 140px 0;
+}
+.about-block {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 47px;
+    margin-left: 50px;
+}
+
+.about-card {
+font-size: 32px;
+font-weight: 400; 
+}
+.about-content {
+    position: relative;
+    background: var(--color-blue);
+    border-radius: 25px;
+    padding-left: 117px;
+    width: 571px;
+    height: 434px;
+    text-align: center;
+}
+.about-content2{
+    position: relative;
+    background: var(--color-blue);
+    border-radius: 25px;
+    width: 571px;
+    height: 305px;
+    text-align: center;
+    margin-bottom: 25px;
+    padding: 9px 117px 17px 21px;
+}
+.about-content3{
+    position: relative;
+    background: var(--color-blue);
+    border-radius: 25px;
+    width: 571px;
+    height: 305px;
+    text-align: center;
+    padding: 9px 117px 17px 21px;
+}
+.about-content__img {
+    background: var(--color-blue);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 450px;
+padding: 10px;
+}
+.about-content__img2 {
+    background: var(--color-blue);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 450px;
+padding: 10px;
+}
+.about-conttent__descr-top {
+    margin-bottom: 14px;
+    max-width: 428px;
+    
+}
+.about-conttent__descr-margin {
+    margin-bottom: 45px;
+}
+.about-conttent__descr-body {
+    max-width: 421px;
+}
+.about-conttent__descr-bottom {
+    position: absolute;
+    bottom: 12px;
+    left: 190px;
+}
+
+
+/* -------------------регистрация------------ */
+.registration {
+    padding: 27px 0 167px 0;
+    text-align: center;
+}
+.registration__title {
+    color: var(--color-white);
+font-size: 64px;
+font-weight: 400;
+margin-bottom: 27px;
+text-transform: uppercase;
+}
+input {
+    background-color: var(--color-blue);
+    border: none;
+    border-radius: 18px;
+    width: 792px;
+    padding: 20px;
+    margin-bottom: 19px;
+}
+.btn-form {
+    color: var(--color-white);
+    background: var(--color-btn);
+    border: none;
+    padding: 5px;
+    width: 792px;
+    border-radius: 18px;
+font-size: 64px;
+font-weight: 400;
+}
+.btn-form:hover {
+    background: var(--active-link);
+}
+/* -----------------вход--------- */
+.registration__entry {
+    color: var(--color-white);
+    font-size: 64px;
+    font-weight: 400;
+    margin-bottom: 123px;
+    text-transform: uppercase;
+}
